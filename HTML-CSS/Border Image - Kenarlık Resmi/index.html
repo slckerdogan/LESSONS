@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Image - Kenarlik Resmi</title>
+    <style>
+        .BorderImg{
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(border.png) 50 round;
+            /*
+            50 sayısı resmi kaç parçaya bölmek istediğimizi ifade eder. sayı arttıkça resim lastik gibi uzar.
+            round yerine yazacağın resim özellikleriyle de border nasıl bir özellik alsın belirleyebilirsin.
+            */
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="BorderImg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, earum.</h2>
+</body>
+</html>

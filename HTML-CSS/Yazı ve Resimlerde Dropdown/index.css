@@ -1,0 +1,39 @@
+.dropdown{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.content{
+    position: absolute;
+    z-index: 1;
+    background-color: blanchedalmond;
+    width: 40%;
+    color: blueviolet;
+    padding: 22px 16px;
+    margin-left: 10px;
+    border: 1px solid bisque;
+    box-shadow: 15px 16px 10px 12px gray;
+    display: none;
+}
+
+.dropdown:hover .content{
+    display: block;
+}
+
+.dropDown{
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    margin-top: 200px;
+    border: 1px solid red;
+    text-align: center;
+}
+.image{
+    display: none;
+}
+.dropDown:hover .image{
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}

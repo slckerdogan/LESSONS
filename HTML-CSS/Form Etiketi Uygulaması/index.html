@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Etiketi Uygulamasi</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut numquam ducimus perspiciatis porro, accusamus voluptate quos minima officia eum laboriosam voluptates quam laudantium dolor voluptas eveniet praesentium sunt doloribus alias distinctio nobis sint nihil?</p><br>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text" placeholder="Surname"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" placeholder="Email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="genderRadio" id="genderFemale" value="Female"><label
+                        for="genderFemale">Female</label>
+                    <input type="radio" name="genderRadio" id="genderMale" value="Male"><label
+                        for="genderMale">Male</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Birth of Date:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" id="book" name="book">
+                    <label for="book">Reading Book</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" id="musik" name="musik">
+                    <label for="musik">Listening Musik</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" id="tv" name="tv">
+                    <label for="tv">Watching TV</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Picture:</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td>Comment or Message:</td>
+                <td><textarea name="" id="" placeholder="Message" cols="80" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="agrementRadio">I read and accept it</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="agrementRadio">I read but don't accept it</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

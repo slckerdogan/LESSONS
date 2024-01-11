@@ -1,0 +1,49 @@
+.transition{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    background: darkred;
+    color: #fff;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.transition:hover{
+    width: 150px;
+    background: beige;
+    color: darkred;
+    height: 50px;
+    font-style: italic;
+    transform: scale(1.2);
+    /*
+    transform: translate(180px,-250px);
+    transform: rotate(270deg); açının başına eksi işareti de koyabiliriz!!!
+    transform: skew(10deg,5deg);  xx ve y ekseninde bükme sağlar ve eksi değerde alabilir
+    */
+}
+
+.transition2{
+    clear:both;
+    width: 95%;
+    border:none;
+    background: darkred;
+    color: #fff;
+    transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.transition2 div{
+    flex:1;
+    cursor:pointer;
+    transition: all .5s;
+    padding: 20px;
+    text-align: center;
+}
+
+.transition2 div:hover{
+    flex: 1.5;
+    background-color: burlywood;
+}

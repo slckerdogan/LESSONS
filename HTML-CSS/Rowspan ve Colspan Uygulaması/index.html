@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowspan - Colspan Örnek Yapımı </title>
+    <style>
+        table{
+            font-size: larger;
+            font-weight: bold;
+            color:whitesmoke;
+            background-color:black;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+        th,td{
+            padding: 50px;
+            align-items: center;
+            vertical-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px solid">
+        <tr>
+            <th colspan="4">ŞEHİRLER</th>
+
+        </tr>
+        <tr>
+            <td>Adana</td>
+            <td>Akdeniz Bölgesi</td>
+            <td>Akdeniz İklimi</td>
+            <td rowspan="3">4 mevsim yaşanır</td>
+        </tr>
+        <tr>
+            <td>İzmir</td>
+            <td>Ege Bölgesi</td>
+            <td>Akdeniz İklimi</td>
+        </tr>
+        <tr>
+            <td>Nevşehir</td>
+            <td>İç Anadolu Bölgesi</td>
+            <td>Karasal İklim</td>
+        </tr>
+    </table>
+</body>
+</html>

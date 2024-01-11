@@ -1,0 +1,41 @@
+.tooltip{
+    position: relative;
+    display: inline-block;
+    margin-left:10%;
+    width: 100%;
+}
+
+input{
+    border: 1px solid coral;
+    width:15%;
+    padding: 5px;
+}
+
+.tip-text{
+    width: 150px;
+    background-color: brown;
+    color: chartreuse;
+    padding: 8px 18px;
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    left: 20px; /*left değerini değiştirerek tooltipi sağa veya sola kaydırabilirsin*/
+    top:40px; /*top değerini değiştirerek tooltipi yukarı veya aşağı kaydırabilirsin*/
+    visibility: hidden;
+}
+
+.tooltip:hover .tip-text{
+    visibility: visible;
+}
+
+.tip-text::after{
+    content: "";
+    position:absolute;
+    border-width: 7px;
+    border-style: dotted;
+    border-color: transparent transparent cornflowerblue transparent; /*ok işareti yaptık. transparentların yerlerini değiştirerek okların yönünü değiştirebilirsin. tabii ok işaretini yapabilmenin ilk yolu content kısmını boş bırakmaktan geçiyor*/
+    right: 85px; /*bunu değiştirerek tooltipi okunu sağa veya sola  kaydırabilirsin*/
+    top:-15px; /*bunu değiştirerek tooltipi okunu yukarı veya aşağı kaydırabilirsin*/
+    vertical-align:middle;
+}

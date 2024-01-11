@@ -1,0 +1,106 @@
+body{
+    margin:0;
+    padding:0;
+}
+.header{
+    background-color: cornsilk;
+    padding: 7px;
+    text-align: center;
+    color:cornflowerblue;
+}
+
+.menu ul{
+    background-color: blanchedalmond;
+    padding: 17px;
+    margin: 0;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline;
+    padding-left: 27px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color:rgb(90, 36, 139);
+    font-size:20px;
+    font-weight: bolder;
+    padding:17px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.menu a:hover{
+    background-color: coral;
+}
+
+button{
+    margin-left: 5px;
+    color: rgb(90, 36, 139);
+    font-weight: bold;
+}
+
+input:hover{
+    background-color: coral;
+}
+
+.sidebar{
+    background-color: rgb(219, 207, 207);
+    padding: 7px;
+    color: crimson;
+    width: 22%;
+    height: 540px;
+    float: left;
+}
+
+.sidebar ul li{
+    list-style-type: none;
+    padding: 17px;
+}
+
+
+.sidebar a{
+    text-decoration: none;
+    color:rgb(90, 36, 139);
+    padding:17px;
+    font-size:20px;
+    font-weight: bolder;
+}
+
+.sidebar a:hover{
+    background-color: coral;
+}
+
+.change{
+    background-color:rgb(241, 238, 238);
+    padding: 15px;
+    color:darkolivegreen;
+    width: 75%;
+    float: right;
+    height: 525px;
+}
+
+.change h2{
+    color: darkgray;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.change footer{
+    /*border-bottom: 1px dotted black;*/
+    font-size: 15px;
+    float: right;
+}
+
+.change .content{
+    font-size: 20px;
+}
+
+.page-bottom{
+    background-color: black;
+    color:white;
+    clear: left;
+    text-align: center;
+    padding:10px;
+}

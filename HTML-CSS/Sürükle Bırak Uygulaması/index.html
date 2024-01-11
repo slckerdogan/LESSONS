@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürükle Birak Uygulamasi</title>
+</head>
+<body>
+    <img src="1654469480738831-0.jpg" alt="resim" id="picture" draggable="true">
+
+    <p style="float: right;"><img src="images.jpg" width="128" height="128" alt="sil" ondragenter="return false" ondragover="return false" ondrop="Delete();"></p>
+
+
+    <script>
+        function Delete(){
+            let pic=document.querySelector("#picture");
+            pic.parentNode.removeChild(pic);
+        }
+    </script>
+</body>
+</html>

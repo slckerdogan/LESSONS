@@ -1,0 +1,43 @@
+p::first-letter{
+    color: blueviolet;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+p::first-line{
+    background-color: bisque;
+}
+
+p::selection{
+    background:darkblue;
+    color: white;
+}
+
+input::placeholder{
+    color: lime;
+}
+
+textarea::placeholder{
+    color:lightcoral;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+input:focus{
+    color:rgb(90, 47, 107);
+}
+
+input[type="reset"]:focus{
+    background-color: lime;
+    color: white;
+}
+
+input[type="checkbox"]:checked+label{
+    color:red ;
+}
+
+input[type="file"]:hover{
+    background-color: lime;
+    color: white;
+}
+
