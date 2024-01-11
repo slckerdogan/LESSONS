@@ -1,2 +1,2 @@
 # LESSONS
-It includes my front end lessons' notes
+It Includes My FRONT END Lesson's Notes
