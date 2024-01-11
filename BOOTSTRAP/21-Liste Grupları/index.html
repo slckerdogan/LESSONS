@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 21-Liste Grupları</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row row-cols-4">
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item">C</li>
+                    <li class="list-group-item">CPP</li>
+                    <li class="list-group-item">OFFICE</li>
+                    <li class="list-group-item">CSS</li>
+                    <li class="list-group-item">BOOTSTRAP</li>
+                    <li class="list-group-item">PYTHON</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item">C</li>
+                    <li class="list-group-item">CPP</li>
+                    <li class="list-group-item">OFFICE</li>
+                    <li class="list-group-item active" aria-current="true">CSS</li>
+                    <!--aria-current true ile ekran okuyucu aktif liste elemanını öğrenir-->
+                    <li class="list-group-item disabled" aria-disabled="false">BOOTSTRAP</li>
+                    <!--aria-disabled true ile ekran okuyucu pasif liste elemanını öğrenir-->
+                    <li class="list-group-item">PYTHON</li>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="list-group">
+                    <!--Linklerle bezeli listelerde listeyi div ile oluştur ve linklere aşağıdaki class yapılarını muhakkak ver-->
+                    <a href="#" class="list-group-item list-group-item-action">Node</a>
+                    <a href="#" class="list-group-item list-group-item-action">React</a>
+                    <a href="#" class="list-group-item list-group-item-action">Angular</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tailwand</a>
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Mongodb</a>
+                    <a class="list-group-item list-group-item-action disabled" aria-disabled="false">Jquery</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action">Node</button>
+                    <button type="button" class="list-group-item list-group-item-action">React</button>
+                    <button type="button" class="list-group-item list-group-item-action" disabled>Angular</button>
+                    <button type="button" class="list-group-item list-group-item-action active"
+                        aria-current="true">Tailwand</button>
+                    <button type="button" class="list-group-item list-group-item-action">Mongodb</button>
+                    <button type="button" class="list-group-item list-group-item-action">Jquery</button>
+                </div>
+            </div>
+            <div class="col-4 my-3">
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action">Node</button>
+                    <button type="button" class="list-group-item list-group-item-action">React</button>
+                    <button type="button" class="list-group-item list-group-item-action">Angular</button>
+                    <button type="button" class="list-group-item list-group-item-action">Tailwand</button>
+                    <button type="button" class="list-group-item list-group-item-action">Mongodb</button>
+                    <button type="button" class="list-group-item list-group-item-action">Jquery</button>
+                </div>
+            </div>
+            <div class="col-4 my-3">
+                <div class="list-group list-group-horizontal">
+                    <button type="button" class="list-group-item list-group-item-action">Node</button>
+                    <button type="button" class="list-group-item list-group-item-action">React</button>
+                    <button type="button" class="list-group-item list-group-item-action">Angular</button>
+                </div>
+            </div>
+            <div class="col-4 my-3">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item list-group-item-secondary">C</li>
+                    <li class="list-group-item list-group-item-warning">CPP</li>
+                    <li class="list-group-item list-group-item-primary">OFFICE</li>
+                    <li class="list-group-item list-group-item-danger">CSS</li>
+                    <li class="list-group-item list-group-item-primary">BOOTSTRAP</li>
+                    <li class="list-group-item list-group-item-secondary">PYTHON</li>
+                </ol>
+            </div>
+
+            <div class="col-6 my-3">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-center align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Backend</div>
+                            Php,Asp,Nodejs,Python
+                        </div>
+                        <span class="badge bg-danger rounded-pill">25</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-center align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Frontend</div>
+                            HTML,CSS,Bootstrap
+                        </div>
+                        <span class="badge bg-danger rounded-pill">12</span>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-6 my-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active text-danger bg-white"
+                        aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb1">List Grup Başlığı</h5>
+                            <small>1 gün önce</small>
+                        </div>
+                        <p class="mb-1">Lorem ipsum dolor sit amet.</p>
+                        <small class="text-muted">Detaylar</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action active text-danger bg-white"
+                        aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb1">List Grup Başlığı-2</h5>
+                            <small>1 gün önce</small>
+                        </div>
+                        <p class="mb-1">Lorem ipsum dolor sit amet.</p>
+                        <small class="text-muted">Detaylar-2</small>
+                    </a>
+                </div>
+            </div>
+            <!--!DİKEY TAB PANEL YAPIMI-->
+<!--?dikey tab panel oluştururken, bir adet role=tabpanel içine panelin başlıklarını içeren ve bu başlıkların yönlendirmelerini kontrol eden div oluşturulur -->
+            <div class="col-12">
+                <div role="tabpanel">
+                    <div class="list-group" id="myTabList" role="tablist">
+                        <a href="#home" class="list-group-item list-group-item-action active"
+                            data-bs-toggle="list">Anasayfa</a>
+                        <a href="#profile" class="list-group-item list-group-item-action"
+                            data-bs-toggle="list">Profil</a>
+                        <a href="#contact" class="list-group-item list-group-item-action"
+                            data-bs-toggle="list">İletişim</a>
+                        <a href="#about" class="list-group-item list-group-item-action"
+                            data-bs-toggle="list">Hakkında</a>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel">Lorem ipsum dolor sit amet.</div>
+                        <div class="tab-pane" id="profile" role="tabpanel">Lorem ipsum dolor sit amet consectetur.</div>
+                        <div class="tab-pane" id="contact" role="tabpanel">Lorem, ipsum.</div>
+                        <div class="tab-pane" id="about" role="tabpanel">Lorem</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--!YATAY TAB PANEL YAPIMI-->
+<!--?href kısmına atadığımız link adı diğer divdeki id adı kısmına; aria-controls kısmına atadığımız ad ise diğer divdeki aria-labelledby adı kısmına gider-->
+<!--?yatay tab panelde bir adet role=tabpanel içine tab panel oluşturulmaz ve aşağıdaki gibi adımlar uygulanarak halledilir -->
+            <div class="col-4 my-3">
+                    <div class="list-group" id="myTablist2" role="tablist">
+                        <a href="#list-home" class="list-group-item list-group-item-action active" id="home1" data-bs-toggle="list"
+                            role="tab" aria-controls="list-home">ANASAYFA</a>
+                        <a href="#list-profile" class="list-group-item list-group-item-action" id="profile1" data-bs-toggle="list"
+                            role="tab" aria-controls="list-profile">PROFİL</a>
+                        <a href="#list-contact" class="list-group-item list-group-item-action" id="contact1" data-bs-toggle="list"
+                            role="tab" aria-controls="list-contact">İLETİŞİM</a>
+                        <a href="#list-about" class="list-group-item list-group-item-action" id="about1" data-bs-toggle="list"
+                            role="tab" aria-controls="list-about">HAKKIMIZDA</a>
+                    </div>
+            </div>
+            <div class="col-8 my-3">
+                <div class="tab-content" id="tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="home1">ANASAYFA AÇILDI...Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Debitis animi alias mollitia,
+                        rerum saepe placeat sint repellendus nam dolor obcaecati.</div>
+                    <div class="tab-pane fade active" id="list-profile" role="tabpanel" aria-labelledby="profile1">PROFİL AÇILDI...Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Debitis animi alias mollitia,
+                        rerum saepe placeat sint repellendus nam dolor obcaecati.</div>
+                    <div class="tab-pane fade active" id="list-contact" role="tabpanel" aria-labelledby="contact1">İLETİŞİM AÇILDI...Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Debitis animi alias mollitia,
+                        rerum saepe placeat sint repellendus nam dolor obcaecati.</div>
+                    <div class="tab-pane fade active" id="list-about" role="tabpanel" aria-labelledby="about1">HAKKIMIZDA AÇILDI...Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Debitis animi alias mollitia,
+                        rerum saepe placeat sint repellendus nam dolor obcaecati.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

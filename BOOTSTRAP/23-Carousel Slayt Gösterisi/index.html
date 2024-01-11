@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 23-Carousel Slayt Gösterisi</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <style>
+        .my-slide{
+            z-index: 3;
+            background-color: rgb(0, 0, 0,0.3)!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col bg-danger text-center">
+                <div class="carousel slide carousel-dark position-relative" id="mySlide" data-bs-ride="carousel"> <!--carousel-dark ile geçişi sağlayan butonları ve indicatorsları koyu renk yaptık-->
+                    <div class="position-absolute bottom-0 start-0 my-slide card mb-5">
+                        <div class="card-body">
+                            <h4>Ayrıcaklıyız</h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <div class="text-end"><a href="https://www.google.com/" class="btn btn-danger btn-sm">Katıl</a></div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="ilk slayt"></button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="1" aria-current="true" aria-label="ikinci slayt"></button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="2" aria-current="true" aria-label="üçüncü slayt"></button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="3" aria-current="true" aria-label="dördüncü slayt"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000"> <!--data-bs-interval ile geçiş süresini ayarlayabiliriz-->
+                            <img src="1654469480738831-0.jpg" alt="slide-1">
+                            <div class="carousel-caption d-none d-md-block"> <!--d-none ve d-block sınıflarını ekran boyutuna göre kullanarak
+                            caption özelliğini aktive yada deaktive edebilirsin boyuta göre-->
+                                <h5>BMW</h5>
+                                <p>Lorem</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000"> 
+                            <img src="1654469477912330-1.jpg" alt="slide-2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>BMW2</h5>
+                                <p>Lorem, ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="1654469474875668-2.jpg" alt="slide-3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>BMW3</h5>
+                                <p>Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="1654469469583043-3.jpg" alt="slide-4">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>BMW4</h5>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div> <!--carousel inner end-->
+                    <button type="button" class="carousel-control-prev" data-bs-target="#mySlide" data-bs-slide="prev">
+                        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                        <span class="bi bi-arrow-left fs-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button type="button" class="carousel-control-next" data-bs-target="#mySlide" data-bs-slide="next">
+                        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                        <span class="bi bi-arrow-right fs-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div> <!--carousel end-->
+                   
+            </div> <!--col end-->
+
+        </div> <!--row end-->
+    </div> <!--container end-->
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

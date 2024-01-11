@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 25-Navbar Bileşeni</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        #resim{
+        width:70%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="unnamed.jpg" class="rounded-circle d-inline-block align-text-top me-2" alt="logo">Selçuk Erdoğan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nContent" aria-controls="nContent" aria-expanded="false" aria-label="menü aç/kapa butonu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nContent">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item"><a href="#" class="nav-link active">Anasayfa</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Hakkımızda</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="nDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">ÇALIŞMALARIMIZ</a>
+                        <ul class="dropdown-menu" aria-labelledby="nDropdown">
+                            <li><a href="#" class="dropdown-item">İlk Çalışma</a></li>
+                            <li><a href="#" class="dropdown-item">İkinci Çalışma</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="#" class="dropdown-item">Üçüncü Çalışma</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link disabled" tabindex="-1">İletişim</a></li>
+                </ul>
+                <span class="navbar-brand h4 mb-lg-0 me-2">Ben Navbar</span>
+                <form class="d-flex">
+                    <input type="search" class="form-control me-2" placeholder="Arama yap" aria-label="arama metin kutusu">
+                    <button class="btn btn-outline-light" type="button">Ara</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col bg-white text-center my-4">
+                <div class="carousel slide carousel-dark position-relative" id="mySlide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="ilk slayt"></button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="1" aria-current="true" aria-label="ikinci slayt"></button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="2" aria-current="true" aria-label="üçüncü slayt"></button>
+                        <button type="button" data-bs-target="#mySlide" data-bs-slide-to="3" aria-current="true" aria-label="dördüncü slayt"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="1654469480738831-0.jpg" id="resim" alt="slide-1">
+                            <div class="carousel-caption d-none d-md-block text-danger">
+                                <h5>BMW</h5>
+                                <p>Lorem</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000"> 
+                            <img src="1654469477912330-1.jpg" id="resim" alt="slide-2">
+                            <div class="carousel-caption d-none d-md-block text-danger">
+                                <h5>BMW2</h5>
+                                <p>Lorem, ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="1654469474875668-2.jpg" id="resim" alt="slide-3">
+                            <div class="carousel-caption d-none d-md-block text-danger">
+                                <h5>BMW3</h5>
+                                <p>Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="1654469469583043-3.jpg" id="resim" alt="slide-4">
+                            <div class="carousel-caption d-none d-md-block text-danger">
+                                <h5>BMW4</h5>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="carousel-control-prev" data-bs-target="#mySlide" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon btn btn-outline-danger" aria-hidden="true"></span>
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button type="button" class="carousel-control-next" data-bs-target="#mySlide" data-bs-slide="next">
+                        <span class="carousel-control-next-icon btn btn-outline-danger" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div>
+                   
+            </div>
+
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-5">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">Sayı Krallığı</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Lebron James</li>
+                        <li class="list-group-item">Stephan Curry</li>
+                        <li class="list-group-item">Giannis Antetokounmpo</li>
+                        <li class="list-group-item">Luka Doncic</li>
+                        <li class="list-group-item">Nikola Jokic</li>
+                        <li class="list-group-item">Donovan Mitchell</li>
+                    </ul>
+                    <div class="card-footer"><a href="https://www.nba.com/" style="text-decoration:none; color:black;">Detaylar</a></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">Asist Krallığı</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Lebron James</li>
+                        <li class="list-group-item">Stephan Curry</li>
+                        <li class="list-group-item">Giannis Antetokounmpo</li>
+                        <li class="list-group-item">Luka Doncic</li>
+                        <li class="list-group-item">Nikola Jokic</li>
+                        <li class="list-group-item">Donovan Mitchell</li>
+                    </ul>
+                    <div class="card-footer"><a href="https://www.nba.com/" style="text-decoration:none; color:black;">Detaylar</a></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">Ribaund Krallığı</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Lebron James</li>
+                        <li class="list-group-item">Stephan Curry</li>
+                        <li class="list-group-item">Giannis Antetokounmpo</li>
+                        <li class="list-group-item">Luka Doncic</li>
+                        <li class="list-group-item">Nikola Jokic</li>
+                        <li class="list-group-item">Donovan Mitchell</li>
+                    </ul>
+                    <div class="card-footer"><a href="https://www.nba.com/" style="text-decoration:none; color:black;">Detaylar</a></div>
+                </div>
+            </div>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

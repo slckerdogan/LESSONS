@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 20-Spinner Kullanımı</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row row-cols-2">
+            <div class="col">
+                <div class="spinner-border" role="status">
+                    <!--!spinner rolü statüs olarak geçer ve bunu kullanmak gerekir. text özelliğini kullanarak spinner'a renk veririz-->
+                    <!--!spinner boyutunu daha fazla büyütmek istersek css ile width ve height veririz ancak ikisi de ayın rakamlar olmalı ki orantılı olsun-->
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-border text-danger spinner-border-sm" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+                <div class="spinner-grow text-success spinner-grow-sm" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col d-flex justify-content-center my-5">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+            <div class="col text-center my-5">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Yükleniyor</span>
+                </div>
+            </div>
+            <div class="col text-center my-5">
+                <button class="btn btn-dark" disabled>Yükleniyor...
+                    <span class="spinner-border text-light" role="status" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="col text-center my-5">
+                <button class="btn btn-dark" disabled>
+                    <span class="spinner-border spinner-border-sm text-light" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Yükleniyor...</span>
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

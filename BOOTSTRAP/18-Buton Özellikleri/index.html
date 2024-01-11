@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 18-Buton Özellikleri</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12"> <!--BUTON RENK ATAMASI-->
+                <button class="btn btn-primary">btn-primary</button>
+                <button class="btn btn-secondary">btn-secondary</button>
+                <button class="btn btn-danger">btn-danger</button>
+                <button class="btn btn-dark">btn-dark</button>
+                <button class="btn btn-warning">btn-warning</button>
+                <button class="btn btn-success">btn-success</button>
+                <button class="btn btn-info">btn-info</button>
+                <button class="btn btn-light">btn-light</button>
+                <button class="btn btn-link">btn-link</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12"> <!--LİNKİ BUTON YAPMAK-->
+                <a href="#" class="btn btn-danger" role="button">Linkimiz</a>
+                <button type="submit" class="btn btn-danger">Submit</button>
+                <input type="button" class="btn btn-success" value="Buton Input">
+                <input type="submit" class="btn btn-danger" value="Submit Input">
+                <input type="reset" class="btn btn-danger" value="Reset Input">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <button class="btn btn-outline-primary">primary</button>
+                <button class="btn btn-outline-secondary">secondary</button>
+                <button class="btn btn-outline-danger">danger</button>
+                <button class="btn btn-outline-dark">dark</button>
+                <button class="btn btn-outline-warning">warning</button>
+                <button class="btn btn-outline-success">success</button>
+                <button class="btn btn-outline-info">info</button>
+                <button class="btn btn-outline-light">light</button>
+                <button class="btn btn-outline-link">link</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12"> <!--BUTON OUTLINE ATAMASI-->
+                <button class="btn btn-lg btn-outline-primary">primary</button>
+                <button class="btn btn-sm btn-outline-secondary">secondary</button>
+                <button class="btn btn-outline-danger" disabled>danger</button>
+                <a class="btn btn-danger disabled" role="button" aria-disabled="true" tabindex="-1">Linkimiz</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12"> <!--d-grid=>bir butonun tüm satırı kaplamasını sağlar; gap=>belli sayıda buton oluşturur-->
+                <div class="d-grid gap-3 mt-1 d-md-block"> <!--d-md-block diyerek buton görünümlerinin özellikleriyle oynadık hepsi o ekran boyutuna göre-->
+                    <button class="btn btn-lg btn-primary">primary</button>
+                    <button class="btn btn-lg btn-secondary">secondary</button>
+                    <button class="btn btn-lg btn-success">success</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26-Oturum Doğrulama Uygulaması</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+   <div class="container my-3">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <form class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="validationUsername" class="form-label">Kullanıcı Adı</label>
+                    <input type="text" class="form-control w-100" aria-describedby="EmptyUsername" id="validationUsername" name="validationUsername" placeholder="Lütfen kullanıcı adınızı giriniz" aria-label="kullanıcı adı giriş alanı" required>
+                    <div class="form-text" id="EmptyUsername">Kullanıcı adınız paylaşılmayacak</div>
+                    <div class="invalid-feedback" id="EmptyUsername"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="validationEmail" class="form-label">E-posta</label>
+                    <input type="email" class="form-control w-100" aria-describedby="EmptyEmail" id="validationEmail" name="validationEmail" placeholder="Lütfen e-posta adresinizi giriniz" aria-label="eposta giriş alanı" required>
+                    <div class="form-text" id="emailHelper">E-posta adresiniz paylaşılmayacak</div>
+                    <div class="invalid-feedback" id="EmptyEmail"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="validationPassword" class="form-label">Şifreniz</label>
+                    <input type="password" class="form-control w-100" id="validationPassword" name="validationPassword" aria-describedby="EmptyPassword"
+                    placeholder="Lütfen şifrenizi giriniz" aria-label="şifre giriş alanı" required>
+                    <div id="PasswordHelper" class="form-text">Lütfen en az 8 karakterden oluşan, büyük harf, küçük harf, şekil ve sayı içeren bir şifre belirleyin</div>
+                    <div class="invalid-feedback" id="EmptyPassword"></div>
+                </div>
+                <div class="row">
+                   <div class="d-flex justify-content-center offset">
+                        <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
+                   </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+   </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        (function(){
+            'use strict'
+            var Username=document.querySelector("#validationUsername");
+            var Email=document.querySelector("#validationEmail");
+            var Password=document.querySelector("#validationPassword");
+            const SpacePattern=/^\S*$/;  //boşluk denetleme kodu
+            const EmailPattern=/^([a-zA-Z0-9_\-?\.?]){3,}@([a-zA-Z]){3,}\.([a-zA-Z]){2,5}$/;
+            const PasswordPattern=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})(?=.*[!@#$%^&*])/;
+
+            Username.addEventListener('blur',controlUsername);
+            function controlUsername(){
+                var error=document.querySelector("#EmptyUsername");
+                if(Username.value.length==0){
+                    Username.classList.remove("is-valid");
+                    Username.classList.add("is-invalid");
+                    error.innerHTML="Kullancı adı boş bırakılamaz";
+                    return false;
+                }
+                else if(!SpacePattern.test(Username.value)){
+                    Username.classList.remove("is-valid");
+                    Username.classList.add("is-invalid");
+                    error.innerHTML="Kullancı adı alanında boşluk bırakılamaz";
+                    return false;
+                }
+                else if(Username.value.length<6){
+                    Username.classList.remove("is-valid");
+                    Username.classList.add("is-invalid");
+                    error.innerHTML="Kullancı adı en az 6 karakterden oluşmalıdır";
+                    return false;
+                }
+                else{
+                    Username.classList.add("is-valid");
+                    Username.classList.remove("is-invalid");
+                    error.innerHTML="";
+                    return true;
+                }
+            };
+
+            Email.addEventListener('blur',controlEmail);
+            function controlEmail(){
+                var error=document.querySelector("#EmptyEmail");
+                if(SpacePattern.test(Email.value) && EmailPattern.test(Email.value)){
+                    Email.classList.add("is-valid");
+                    Email.classList.remove("is-invalid");
+                    error.innerHTML="";
+                    return true;
+                }
+                else{
+                    Email.classList.remove("is-valid");
+                    Email.classList.add("is-invalid");
+                    error.innerHTML="Lütfen geçerli bir mail adresi giriniz";
+                    return false;
+                }
+            };
+
+            Password.addEventListener('blur',controlPassword);
+            function controlPassword(){
+                var error=document.querySelector("#EmptyPassword");
+                if(SpacePattern.test(Password.value) && PasswordPattern.test(Password.value)){
+                    Password.classList.add("is-valid");
+                    Password.classList.remove("is-invalid");
+                    error.innerHTML="";
+                    return true;
+                }
+                else{
+                    Password.classList.remove("is-valid");
+                    Password.classList.add("is-invalid");
+                    error.innerHTML="Lütfen geçerli bir şifre giriniz";
+                    return false;
+                }
+            };
+
+            var myForms=document.querySelector(".needs-validation");
+            myForms.addEventListener('submit',function(e){
+                if(!myForms.checkValidity() || !controlUsername() || !controlEmail() || !controlPassword()){
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            },false);
+        }
+    )();
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 24-Accordion Yapımı</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+           <div class="col">
+                <div class="accordion accordion-flush" id="myAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button type="button" class="accordion-button text-primary collapsing" data-bs-toggle="collapse" data-bs-target="#first" aria-expanded="true" aria-controls="first"></s>Bootstrap Eğitimi</button>
+                        <!--!collapsing, butonun height boyutunu küçültüp inceltiyor-->
+                        </h2>
+                        <div id="first"class="according-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#myAccordion">
+                            <div class="accordion-body">
+                                <strong>Bootstrap Eğitimi </strong>Lorem ipsum dolor sit amet.
+                                <cite>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut.</cite>Lorem ipsum dolor sit, amet consectetur adipisicing.
+                            </div> <!--accordion body sonu-->
+                        </div> <!--accordionun ekranda gösterilme komutlarının yazdığı kod alanı sonu-->
+                    </div> <!--accordion item oluşturma blok sonu sonu-->
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#second" aria-expanded="true" aria-controls="second">CSS Eğitimi</button>
+                        </h2>
+                        <div id="second"class="according-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#myAccordion">
+                            <div class="accordion-body">
+                                <img src="1654469477912330-1.jpg" alt="CSS" class="img-fluid float-end">
+                                <strong>CSS Eğitimi </strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laudantium iste earum accusantium quo! Magnam voluptatum libero error? Sunt, vitae. Inventore quod optio quam sint? Unde tenetur iure beatae! Amet officia et excepturi ullam architecto velit dolorem. Perferendis fuga consectetur earum molestiae consequatur voluptatibus possimus odit, officia laudantium tempore, aperiam iure neque. Magnam id molestiae sequi sunt harum error esse excepturi ducimus maiores, dolore molestias totam quibusdam incidunt unde optio non ab cumque! Pariatur repellendus dolor nesciunt quo eius aperiam porro delectus culpa, enim, facere autem nam commodi harum eligendi ducimus, laudantium est soluta quam asperiores repudiandae dolorem dignissimos quas assumenda sit. Dicta libero temporibus cumque quam vero, eum nam. Commodi beatae aspernatur quis. Minus qui, laudantium quae voluptatibus autem voluptate nobis ratione quos quidem neque labore eos ipsam! Libero incidunt id quas ratione placeat perspiciatis laboriosam assumenda omnis cumque, corrupti totam quaerat at nesciunt ducimus cupiditate vel earum nulla fuga ipsam officia nemo! Necessitatibus sequi saepe alias ipsam incidunt corporis eos quas deleniti dolorum. Excepturi, soluta. Facilis ab animi, perspiciatis adipisci inventore accusamus! Similique qui delectus optio doloremque ex vero consequatur, excepturi exercitationem accusantium suscipit totam eaque quidem voluptas aut alias quia, odio ipsam culpa deleniti. Quidem, sed pariatur!
+                            </div> <!--accordion body sonu-->
+                        </div> <!--accordionun ekranda gösterilme komutlarının yazdığı kod alanı sonu-->
+                    </div> <!--accordion item oluşturma blok sonu sonu-->
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThird">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#third" aria-expanded="true" aria-controls="third">HTML Eğitimi</button> 
+                        <!--!butona collapsed ekleme sebebi butonun yönünü ayarlamak. Bu yazıyı anlamazsan collapsed komutunu bir butondan kaldırıp dene -->
+                        </h2>
+                        <div id="third"class="according-collapse collapse" aria-labelledby="headingThird" data-bs-parent="#myAccordion">
+                            <div class="accordion-body">
+                                <strong>HTML Eğitimi </strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laudantium iste earum accusantium quo! Magnam voluptatum libero error? Sunt, vitae. Inventore quod optio quam sint? Unde tenetur iure beatae! Amet officia et excepturi ullam architecto velit dolorem. Perferendis fuga consectetur earum molestiae consequatur voluptatibus possimus odit, officia laudantium tempore, aperiam iure neque. Magnam id molestiae sequi sunt harum error esse excepturi ducimus maiores, dolore molestias totam quibusdam incidunt unde optio non ab cumque! Pariatur repellendus dolor nesciunt quo eius aperiam porro delectus culpa, enim, facere autem nam commodi harum eligendi ducimus, laudantium est soluta quam asperiores repudiandae dolorem dignissimos quas assumenda sit. <img src="1654469480738831-0.jpg" alt="HTML" class="img-fluid img-thumbnail float-start">Dicta libero temporibus cumque quam vero, eum nam. Commodi beatae aspernatur quis. Minus qui, laudantium quae voluptatibus autem voluptate nobis ratione quos quidem neque labore eos ipsam! Libero incidunt id quas ratione placeat perspiciatis laboriosam assumenda omnis cumque, corrupti totam quaerat at nesciunt ducimus cupiditate vel earum nulla fuga ipsam officia nemo! Necessitatibus sequi saepe alias ipsam incidunt corporis eos quas deleniti dolorum. Excepturi, soluta. Facilis ab animi, perspiciatis adipisci inventore accusamus! Similique qui delectus optio doloremque ex vero consequatur, excepturi exercitationem accusantium suscipit totam eaque quidem voluptas aut alias quia, odio ipsam culpa deleniti. Quidem, sed pariatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis similique, tempora suscipit quidem iure est numquam tempore maxime. Ab aliquid nemo ipsum recusandae sunt, inventore quos magni corrupti in, nostrum possimus aliquam quidem qui excepturi eaque eum ullam, maiores quibusdam atque tempora. Iure tenetur temporibus quidem saepe aliquam, odio quasi?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis doloremque numquam cum rerum, modi dolorum sapiente! Repellat in necessitatibus pariatur, inventore, soluta repellendus fugit suscipit quibusdam debitis sit adipisci impedit?
+                            </div> <!--accordion body sonu-->
+                        </div> <!--accordionun ekranda gösterilme komutlarının yazdığı kod alanı sonu-->
+                    </div> <!--accordion item oluşturma blok sonu sonu-->
+                </div> <!--accordion ana div sonu-->
+
+           </div> <!--col end-->
+
+        </div> <!--row end-->
+    </div> <!--container end-->
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
