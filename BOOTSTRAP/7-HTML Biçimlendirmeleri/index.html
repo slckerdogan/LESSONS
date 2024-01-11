@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 7-HTML Biçimlendirmeleri</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--Bootstrap font-size olayını 1 rem yani 16px ve satır aralığını 1.5 olarak kendiliğinden ayarlar. HTML'de alt satıra geçmek 
+satır dolduğunda kendiliğinden olurdu ama Bootstrapte kendin alt satıra kaydır-->
+<div class="container">
+    <h1>Merhaba H1</h1>
+    <h2>Merhaba H2</h2>
+    <h3>Merhaba H3</h3>
+    <h4>Merhaba H4</h4>
+    <h5>Merhaba H5</h5>
+    <h6>Merhaba H6</h6> <!--Daha güzel bir kalınlık font-size verir HTML'nin kendisine oranla-->
+    
+    <!--Başlık etiketinde display class'ı da kullanılır ve bu 1-6 arası değer alır. h1-display-1 ile; h2-display-2 ile; h3-display-3 ile;h4-display-4 ile;
+    h5-display-5 ile; h6-display-6 ile eşleşir. Böylece başlıklar daha büyük olur ama kalınlıkları bir tık azalır.-->
+    <h1 class="display-1">Merhaba H1</h1>
+    <h2 class="display-2">Merhaba H1</h2>
+    <h3 class="display-3">Merhaba H3</h3>
+    <h4 class="display-4">Merhaba H4</h4>
+    <h5 class="display-5">Merhaba H5</h5>
+    <h6 class="display-6">Merhaba H6</h6>
+
+    <h1 class="display-1">Merhaba H1 <small>(Yeni Baskı)</small></h1> <!--Olan yazı font-size'dan daha küçük font-size sahip bir yazı oluşturmamızı sağlar-->
+
+    <p class="h2">Bu aslında bir paragraf</p> <!--Bootstrap h2 class sayesinde paragrafı bir başlık tagı olarak algılar. Class yerine h1,h3,h4,h5,h6'da yazarak
+    paragrafları başlık olarak dönüştürmen mümkün-->
+    
+    <p>Burada mark komutu var:<mark>Merhaba ben mark etiketi kullanılan ama sarı olmak yerine arka rengi daha güzel olan, kapladığım alandan az alan kaplayan
+        ve iç dolguya sahip bir yazıyım</mark></p>
+
+    <p><abbr title="Dünya Sağlık Örgütü">WHO</abbr>'nun merkezi Cenevre'dir.</p>
+    <p><abbr title="Dünya Sağlık Örgütü" class="initialism">WHO</abbr>'nun merkezi Cenevre'dir.</p>
+    <!--abbr etiketinin kullanıldığı yerde altı çizikli çizgi olur ve o kısma geldiğinde soru işareti ortaya çıkar
+    initialism class'ını kullanmak abbr içindeki kelimenin font-size'ını bir tık küçültür-->
+
+    <blockquote>
+    <!--alıntı yaparken blokquote-footer yapısını kullanırız. Bunu footer'daki class="blockquote-footer" ile kullandığımızda, alıntı metinleri daha hoş durur-->
+        <p>alıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapı
+        alıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapı
+        alıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapıalıntı yaparken kullandığımız bir yapı</p>
+    <footer class="blockquote-footer">Selçuk Erdoğan</footer></blockquote>
+
+    <dl> <!--dl-dt-dd yapılarıyla listeler oluşturup bunları Bootstrap ile çok güzel gösteririz.-->
+        <dt>Front-End</dt> <!--Kalın gözükür Bootstrap sayesinde (Normalde HTML'de inceydi)-->
+        <dd>-HTML</dd>
+        <dt>Back-End</dt> <!--Kalın gözükür Bootstrap sayesinde (Normalde HTML'de inceydi)-->
+        <dd>-Node JS</dd>
+    </dl>
+
+    <p>Yaygın HTML kod etiketleri: <code>p</code> ve <code>div</code> şeklindedir.</p> <!--code etiketiyle yazılım dünyasına ait kodları Bootstrap ile daha iyi gösteririz-->
+    
+    <p>Sayfa kaynağını görüntülemek için <kbd>command + option + u</kbd> kısayolunu kullanın.</p> <!--<kbd> Etiketi, genelde klavye kısayollarını belirtmek için kullanılır ve Bootstrap ile daha iyi gösteririz.-->
+    
+    <pre> 
+        <code>pre</code> etiketi önceden biçimlendirilmiş metin tanımlar.
+        Etiketi içerisindeki metin sabit genişlikli yazı tipleri (genellikle Courier) ile görüntülenir. 
+        Satır sonlar ve boşluklar korunur.
+        Bootstrap ile daha güzel bir yazı tipi, okunurluk ve satırlar arası yükseklik var.
+    </pre>
+
+</div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

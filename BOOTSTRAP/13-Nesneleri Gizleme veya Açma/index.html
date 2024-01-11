@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 13-Nesneleri Gizleme veya Açma</title>
+    <link href="bootstrap.min.css" rel="stylesheet">  
+</head>
+
+<body>
+    <div class="container my-5 p-3">
+        <div class="d-none">Ben aslında yokum</div>
+        <div class="d-none d-lg-block">Ben aslında lg'den küçüklerde yokum</div>
+        <div class="d-sm-none d-md-block">Ben aslında sm'de yokum</div>
+        <div class="d-xxl-none">Ben aslında xxl'de yokum ama diğer boyutlarda varım</div>
+        <div class="d-sm-none d-md-block d-xxl-none">Ben aslında değişken bir display komutuyum</div>
+        <div class="d-print-none">Ben print-none oldum</div>
+        <div class="d-none d-print-block">Ben print-block oldum</div>
+    </div>
+<!--
+    d-none => Gizler
+    d-block => Gizlemeyi kapatır
+    d-ekran boyutu-none => O ekran boyutundan itibaren gizleme işlemi yapar ve block olana kadar nesne gizli kalmaya devam eder
+    d-ekran boyutu-block => O ekran boyutundan itibaren gizleme işlemini kapatır ve bunu kullanmak için d-none kullanmış olmak gerekiyor
+    Her ekran boyutu için tek bir etikete birden fazla block ve none komutu atamak mümkündür!!!
+    d-print-none => Yazdırırken gizler
+    d-print-block => Yazdırırken o kısmın çıktıda gözükmesini sağlar. Tabii bunu kullanmak için d-none kullanmış olmak gerekiyor ki anlamı olsun
+-->
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

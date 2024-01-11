@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 2-Grid Sistemi</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Bootstrap bir sayfayı 12'ye böler!!!! Biz 12 parçayı istediğimiz kombinasyonlarla oluşturarak bölme işlemini gerçekleştirebiliriz.-->
+    
+    <!--%100 genişlettiğimiz div ile açtığımız bir satırı 12'ye böldük. Satırı row class ile açarız. col-1 ile birer sütunlu 12 eş parça yaratırız-->
+    <div class="container-fluid p-2 my-2 bg-warning">
+        <div class="row">
+            <div class="col-1 bg-secondary">sütun</div>
+            <div class="col-1 bg-danger">sütun</div>
+            <div class="col-1 bg-secondary">sütun</div>
+            <div class="col-1 bg-danger">sütun</div>
+            <div class="col-1 bg-secondary">sütun</div>
+            <div class="col-1 bg-danger">sütun</div>
+            <div class="col-1 bg-secondary">sütun</div>
+            <div class="col-1 bg-danger">sütun</div>
+            <div class="col-1 bg-secondary">sütun</div>
+            <div class="col-1 bg-danger">sütun</div>
+            <div class="col-1 bg-secondary">sütun</div>
+            <div class="col-1 bg-danger">sütun</div>
+        </div>
+    </div>
+
+    <!--col-1 yerine col-2 vb değerler yazarsak satırı col'dan sonra yazan rakam kadar eş sütuna ayırmış oluruz-->
+    <div class="container-fluid p-2 my-2 bg-warning">
+        <div class="row">
+            <div class="col-2 bg-secondary">sütun</div>
+            <div class="col-2 bg-danger">sütun</div>
+            <div class="col-2 bg-secondary">sütun</div>
+            <div class="col-2 bg-danger">sütun</div>
+            <div class="col-2 bg-secondary">sütun</div>
+            <div class="col-2 bg-danger">sütun</div>
+        </div>
+    </div>
+
+    <!--Şayet sütunları bölerken sayı 12'yi geçerse bootstrap sonraki sütun yada sütunları otomatik olarak alt satıra atar-->
+    <div class="container-fluid p-2 my-2 bg-warning">
+        <div class="row">
+            <div class="col-3 bg-secondary">sütun</div>
+            <div class="col-3 bg-danger">sütun</div>
+            <div class="col-3 bg-secondary">sütun</div>
+            <div class="col-3 bg-danger">sütun</div>
+            <div class="col-3 bg-danger">sütun</div>
+        </div>
+    </div>
+    
+    <!--Şayet sütunları bölerken col'a tireyle bir değer girmezsek, Bootstrap yazılan col class'ı kadar sütunu kendi yaratır -->
+    <div class="container-fluid p-2 my-2 bg-warning">
+        <div class="row">
+            <div class="col bg-secondary">sütun</div>
+            <div class="col bg-danger">sütun</div>
+        </div>
+    </div>
+    <!--Burada iki tane col class yazdık ve Bootstrap %50-%50 iki tane sütun yarattı. Yazılan col class kadar sütun Bootstrap tarafından böyle otomatik oluşur.
+    4 tane col class yazsan %25;5 tane col class yazsan %20'ye bölmek gibi işlemler yapar-->
+
+    <div class="container-fluid p-2 bg-warning">
+        <div class="row">
+            <div class="col-3 bg-secondary">sütun</div>
+            <div class="col-9 py-3 bg-success">
+                <div class="row">
+                    <div class="col-3 bg-primary">sütun</div>
+                    <div class="col-2 bg-danger">sütun</div>
+                    <div class="col-4 bg-primary">sütun</div>
+                    <div class="col-3 bg-danger">sütun</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Böyle yaparak iç içe grid sistemi de oluşturabiliriz ve iç içe gridde de 12'ye parçalanır her zaman-->
+
+    <div class="container-fluid p-2 my-2 bg-warning">
+        <div class="row row-cols-2">
+            <div class="col bg-secondary">sütun</div>
+            <div class="col bg-danger">sütun</div>
+            <div class="col bg-primary">sütun</div>
+        </div>
+    </div>
+    <!--row row-cols-sayı yaparak önce satırı oluşturur akabinde her satırda kaç sütun olacağını belirleriz. Böylece satırdaki sütun sayıları belirlenir ve
+    fazla olan sütunlar yeni satıra geçer-->
+
+    <div class="container-fluid p-2 my-2 bg-warning">
+        <div class="row row-cols-auto"> <!--auto tüm sütunları otomatik olarak yan yana ayarlar-->
+            <div class="col bg-secondary">sütun</div>
+            <div class="col bg-danger">sütun</div>
+            <div class="col bg-primary">sütun</div>
+        </div>
+    </div>
+
+    <!--Cihaza görede grid ayarlaması yapabiliriz. Örneği aşağıdaki gibidir. Buna göre en düşük ekrandan itibaren col ile belirtilen ekran ve sayılara göre
+    satırlara özel sütun ayarlaması yapılabilir (medium yazmadık ama yazılabilirdi col-m-sayı ile haberimiz olsun).-->
+    <div class="container-fluid p-2 my-2 bg-warning">
+        <div class="row">
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 col-xxl-1 bg-secondary">sütun</div>
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 col-xxl-1 bg-danger">sütun</div>
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 col-xxl-1 bg-secondary">sütun</div>
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 col-xxl-1 bg-danger">sütun</div>
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 col-xxl-1 bg-secondary">sütun</div>
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 col-xxl-1 bg-danger">sütun</div>
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

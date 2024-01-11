@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 5-Flexbox 3</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4"> 
+            <div class="p-2 flex-fill bg-danger">flex-fill</div> 
+            <div class="p-2 flex-fill bg-success">flex-fill</div>
+            <div class="p-2 flex-fill bg-secondary">flex-fill</div>
+        </div>
+    </div>
+    <!--flex-fill, otomatik olarak flex'teki boşlukları doldurur ve hizalamayı yapar. flex-ekran boyutu-fill ile de bu özellik ayarlanabilir-->
+            
+    <div class="container my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4"> 
+            <div class="p-2 bg-success">flex-grow</div>
+            <div class="p-2 flex-grow-1 bg-danger">flex-grow</div>
+            <div class="p-2 bg-secondary">flex-grow</div>
+        </div>
+    </div>
+    <!--flex-grow-1,nesnenin kapladığı alanı arttırarak daha çok yer kaplamasını sağlar. flex-ekran boyutu-grow ile de bu özellik ayarlanabilir-->
+    
+    <div class="container my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4"> 
+            <div class="p-2 flex-shrink-0 bg-success">flex-shrink flex-shrink flex-shrink flex-shrink flex-shrink</div>
+            <div class="p-2 bg-danger">flex-shrink flex-shrink flex-shrink flex-shrink flex-shrink</div>
+            <div class="p-2 bg-secondary">flex-shrink flex-shrink flex-shrink flex-shrink flex-shrink</div>
+        </div>
+    </div>
+    <!--flex-shrink-0,nesnenin kapladığı alanın bir alt satıra taşmasını önler. flex-ekran boyutu-shrink ile de bu özellik ayarlanabilir-->
+
+    <div class="container my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4"> 
+            <div class="p-2 me-auto bg-success">me-auto</div> 
+            <div class="p-2 bg-danger">me-auto</div>
+            <div class="p-2 bg-secondary">me-auto</div>
+        </div>
+    </div>
+    <!--me=margn right. Bununla objeyi sola dayayıp kendinden sonraki objeyle arasında sağa doğru boşluk bırakır ve kendinden sonrakini sağa iteleriz-->
+
+    <div class="container my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4"> 
+            <div class="p-2  bg-success">ms-auto</div>
+            <div class="p-2 ms-auto bg-danger">ms-auto</div>
+            <div class="p-2 bg-secondary">ms-auto</div>
+        </div>
+    </div>
+    <!--ms=margn left. Bununla objeyi sağa dayayıp kendinden önceki objeyle arasında sola doğru boşluk bırakır ve kendinden öncekini sola iteleriz-->
+    
+
+    <div class="container my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4"> 
+            <div class="p-2 order-lg-3 bg-success">order-3</div>
+            <div class="p-2 order-lg-1 bg-danger">order-1</div>
+            <div class="p-2 order-lg-2 bg-secondary">order-2</div>
+            <div class="p-2 order-lg-5 bg-primary">order-5</div>
+            <div class="p-2 order-lg-4 bg-warning">order-4</div>
+        </div>
+    </div>
+    <!--order ile içeriklerin sıralamasını kendi istediğimiz gibi yapabiliriz. order-ekran boyutu-sayı ile de bu özellik ayarlanabilir-->
+
+    <div class="container my-2 p-3">
+        <div class="d-flex flex-wrap bg-dark p-3 text-white mb-4"> <!--Esneklik sayesinde taşma olmaz ve alt satıra geçişler gözlenir-->
+            <div class="p-2 bg-success">flex-wrap1</div> 
+            <div class="p-2 bg-danger">flex-wrap2</div>
+            <div class="p-2 bg-secondary">flex-wrap3</div>
+            <div class="p-2 bg-success">flex-wrap4</div> 
+            <div class="p-2 bg-danger">flex-wrap5</div>
+            <div class="p-2 bg-secondary">flex-wrap6</div>
+            <div class="p-2 bg-success">flex-wrap7</div> 
+            <div class="p-2 bg-danger">flex-wrap8</div>
+            <div class="p-2 bg-secondary">flex-wrap9</div>
+            <div class="p-2 bg-success">flex-wrap10</div> 
+            <div class="p-2 bg-danger">flex-wrap11</div>
+            <div class="p-2 bg-secondary">flex-wrap12</div>
+            <div class="p-2 bg-success">flex-wrap13</div> 
+            <div class="p-2 bg-danger">flex-wrap14</div>
+            <div class="p-2 bg-secondary">flex-wrap15</div>
+            <div class="p-2 bg-success">flex-wrap16</div> 
+            <div class="p-2 bg-danger">flex-wrap17</div>
+            <div class="p-2 bg-secondary">flex-wrap18</div>
+            <div class="p-2 bg-success">flex-wrap19</div> 
+            <div class="p-2 bg-danger">flex-wrap20</div>
+            <div class="p-2 bg-secondary">flex-wrap21</div>
+            <div class="p-2 bg-success">flex-wrap22</div> 
+            <div class="p-2 bg-danger">flex-wrap23</div>
+            <div class="p-2 bg-secondary">flex-wrap24</div>
+        </div>
+    </div>
+
+    <div class="container my-2 p-3">
+        <div class="d-flex flex-wrap-reverse bg-dark p-3 text-white mb-4"> 
+<!--Esneklik sayesinde taşma olmaz. Sıralamaya en alt satırdan başlar soldan sağa ilerler yukarı çıkar ve bu sekans tüm yerleşim bitene kadar devam eder-->
+            <div class="p-2 bg-success">flex-wrap-reverse1</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse2</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse3</div>
+            <div class="p-2 bg-success">flex-wrap-reverse4</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse5</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse6</div>
+            <div class="p-2 bg-success">flex-wrap-reverse7</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse8</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse9</div>
+            <div class="p-2 bg-success">flex-wrap-reverse10</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse11</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse12</div>
+            <div class="p-2 bg-success">flex-wrap-reverse13</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse14</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse15</div>
+            <div class="p-2 bg-success">flex-wrap-reverse16</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse17</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse18</div>
+            <div class="p-2 bg-success">flex-wrap-reverse19</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse20</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse21</div>
+            <div class="p-2 bg-success">flex-wrap-reverse22</div> 
+            <div class="p-2 bg-danger">flex-wrap-reverse23</div>
+            <div class="p-2 bg-secondary">flex-wrap-reverse24</div>
+        </div>
+    </div>
+
+    <div class="container my-2 p-3">
+        <div class="d-flex flex-nowrap bg-dark p-3 text-white mb-4"> <!--Esneklik elden gider ve taşmalar gözlenir-->
+            <div class="p-2 bg-success">flex-nowrap1</div> 
+            <div class="p-2 bg-danger">flex-nowrap2</div>
+            <div class="p-2 bg-secondary">flex-nowrap3</div>
+            <div class="p-2 bg-success">flex-nowrap4</div> 
+            <div class="p-2 bg-danger">flex-nowrap5</div>
+            <div class="p-2 bg-secondary">flex-nowrap6</div>
+            <div class="p-2 bg-success">flex-nowrap7</div> 
+            <div class="p-2 bg-danger">flex-nowrap8</div>
+            <div class="p-2 bg-secondary">flex-nowrap9</div>
+            <div class="p-2 bg-success">flex-nowrap10</div> 
+            <div class="p-2 bg-danger">flex-nowrap11</div>
+            <div class="p-2 bg-secondary">flex-nowrap12</div>
+            <div class="p-2 bg-success">flex-nowrap13</div> 
+            <div class="p-2 bg-danger">flex-nowrap14</div>
+            <div class="p-2 bg-secondary">flex-nowrap15</div>
+            <div class="p-2 bg-success">flex-nowrap16</div> 
+            <div class="p-2 bg-danger">flex-nowrap17</div>
+            <div class="p-2 bg-secondary">flex-nowrap18</div>
+            <div class="p-2 bg-success">flex-nowrap19</div> 
+            <div class="p-2 bg-danger">flex-nowrap20</div>
+            <div class="p-2 bg-secondary">flex-nowrap21</div>
+            <div class="p-2 bg-success">flex-nowrap22</div> 
+            <div class="p-2 bg-danger">flex-nowrap23</div>
+            <div class="p-2 bg-secondary">flex-nowrap24</div>
+        </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 4-Flexbox 2 (Nesneleri Yatay Hizalama)</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex justify-content-start bg-dark p-3 text-white mb-4"> <!--Otomatik sola dayalı hizalama-->
+            <div class="p-2">start d-flex</div>
+            <div class="p-2">start d-flex</div>
+            <div class="p-2">start d-flex</div>
+        </div>
+    </div>
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex justify-content-center bg-dark p-3 text-white mb-4"> <!--Ortaya hizalama-->
+            <div class="p-2">center d-flex</div>
+            <div class="p-2">center d-flex</div>
+            <div class="p-2">center d-flex</div>
+        </div>
+    </div>
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex justify-content-end bg-dark p-3 text-white mb-4"> <!--Sona dayalı hizalama-->
+            <div class="p-2">end d-flex</div>
+            <div class="p-2">end d-flex</div>
+            <div class="p-2">end d-flex</div>
+        </div>
+    </div>
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex justify-content-between bg-dark p-3 text-white mb-4"> <!--İlk ve son nesneyi uçlara hizalar ve aralarını doldurur-->
+            <div class="p-2">between d-flex</div>
+            <div class="p-2">between d-flex</div>
+            <div class="p-2">between d-flex</div>
+        </div>
+    </div>
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex justify-content-around bg-dark p-3 text-white mb-4"> <!--İlk ve son nesneyi kenarlardan boşluk bırakarak uçlara hizalar ve aralarını doldurur-->
+            <div class="p-2">around d-flex</div>
+            <div class="p-2">around d-flex</div>
+            <div class="p-2">around d-flex</div>
+        </div>
+    </div>
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex justify-content-evenly bg-dark p-3 text-white mb-4"> <!--nesneleri baştan ve sondan eşit boşluklar bırakarak hizalar-->
+            <div class="p-2">evenly d-flex</div>
+            <div class="p-2">evenly d-flex</div>
+            <div class="p-2">evenly d-flex</div>
+        </div>
+    </div>
+    
+<!--YATAY HİZALAMA YAPARKEN GRİD YAPISINDA GRİDİ TAM 12'YE BÖLMEMEYE DİKKAT EDİYORUZ!!! BÖYLECE HİZALAMA YAPILABİLİR AKSİ HALDE OLMAZ!!!
+    ÇÜNKÜ HİZALAMA İÇİN GRİD SİSTEMİ İÇİNDE BOŞLUKLARA İHTİYACIMIZ VAR!!!
+    YİNE GRİD İÇİNDE GRİD OLUŞTURURSAK DA, EN İÇTEKİ GRİDİ TAM 12'YE BÖLMEMEYE DİKKAT EDİYORUZ!!! BÖYLECE HİZALAMA YAPILABİLİR AKSİ HALDE OLMAZ!!!
+    ÇÜNKÜ HİZALAMA İÇİN GRİD SİSTEMİ İÇİNDE BOŞLUKLARA İHTİYACIMIZ VAR!!!-->
+
+    <div class="container-fluid my-2 p-3"> <!--Bu özellikle satır açmadan sütünu aşağıya kaydırabilirsin-->
+        <div class="row bg-dark text-white">
+            <div class="col-3 bg-danger">d-flex</div>
+            <div class="col-3 bg-danger">d-flex</div>
+            <div class="w-100 mt-4"></div>
+            <div class="col-3 bg-danger">d-flex</div>
+            <div class="col-3 bg-danger">d-flex</div>
+            <div class="col-3 bg-danger">d-flex</div>
+        </div>
+    </div>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

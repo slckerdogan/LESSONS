@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 6-Dikey Flexbox</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container my-2 p-3">
+        <div class="d-flex flex-wrap align-content-strecth bg-dark p-3 text-white mb-4" style="height: 550px;">
+<!--
+    align-content, birden fazla satırda bulunan ögeler üzerinde hizalama işlemi yapar
+    align-content-start => sistem en üst soldan itibaren hizalama yapar
+    align-content-center => dikeyde ortaya hizalar
+    align-content-end => dikeyde en alta hizalar
+    align-content-between => ilk satırı ve son satırı doldurur diğer içerikleri ortaya doldurur
+    align-content-around => ilk satırdan ve son satırdan biraz boşluk bırakarak ilk ve son nesneleri doldurur diğer içerikleri ortaya doldurur
+    align-content-strecth => içeriği dikeyde eşit uzunluklara boşluk bırakmadan yayar
+    
+        align-content-ekran boyutu-özellik ile de ekran boyutlarına göre özellik ayarlayabilirsin!!!
+-->
+            <div class="p-2 bg-success">flexicerik1</div> 
+            <div class="p-2 bg-danger">flexicerik2</div>
+            <div class="p-2 bg-secondary">flexicerik3</div>
+            <div class="p-2 bg-success">flexicerik4</div> 
+            <div class="p-2 bg-danger">flexicerik5</div>
+            <div class="p-2 bg-secondary">flexicerik6</div>
+            <div class="p-2 bg-success">flexicerik7</div> 
+            <div class="p-2 bg-danger">flexicerik8</div>
+            <div class="p-2 bg-secondary">flexicerik9</div>
+            <div class="p-2 bg-success">flexicerik10</div> 
+            <div class="p-2 bg-danger">flexicerik11</div>
+            <div class="p-2 bg-secondary">flexicerik12</div>
+            <div class="p-2 bg-success">flexicerik13</div> 
+            <div class="p-2 bg-danger">flexicerik14</div>
+            <div class="p-2 bg-secondary">flexicerik15</div>
+            <div class="p-2 bg-success">flexicerik16</div> 
+            <div class="p-2 bg-danger">flexicerik17</div>
+            <div class="p-2 bg-secondary">flexicerik18</div>
+            <div class="p-2 bg-success">flexicerik19</div> 
+            <div class="p-2 bg-danger">flexicerik20</div>
+            <div class="p-2 bg-secondary">flexicerik21</div>
+            <div class="p-2 bg-success">flexicerik22</div> 
+            <div class="p-2 bg-danger">flexicerik23</div>
+            <div class="p-2 bg-secondary">flexicerik24</div>
+            <div class="p-2 bg-success">flexicerik25</div>
+            <div class="p-2 bg-danger">flexicerik26</div>
+            <div class="p-2 bg-secondary">flexicerik27</div>
+        </div>
+    </div>
+
+
+    <div class="container my-2 p-3">
+        <div class="d-flex align-items-end bg-dark p-3 text-white mb-4" style="height: 150px;">
+<!--
+   align-items ve flex-wrap bir arada kullanılmaz.
+   align-items, tek sıra esnek ögeler üstünde işlem yaparken align-content çoklu sıralarda bulunan ögeler üstünde işlem yapar
+   align-items-start => sistem en üst soldan itibaren hizalama yapar
+   align-items-center => dikeyde ortaya hizalar
+   align-items-end => dikeyde en alta hizalar
+   align-items-baseline => içeriklerin alt kısımları birbiriyle aynı hizada olacak şekilde bir hizalama yapar
+   align-items-strecth => içeriği dikeyde eşit uzunluklara boşluk bırakmadan yayar
+
+       align-items-ekran boyutu-özellik ile de ekran boyutlarına göre özellik ayarlayabilirsin!!!
+-->
+            <div class="p-2 bg-success">flexicerik1</div> 
+            <div class="p-2 bg-danger">flexicerik2</div>
+            <div class="p-2 bg-secondary">flexicerik3</div>
+            <div class="p-2 bg-success">flexicerik4</div> 
+        </div>
+    </div>
+
+    <div class="container my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4" style="height: 350px;">
+<!--
+   align-self her ögeyi kendine özgü şekilde hizalar ve çalışması için dikeyde boşluk olması gerekir!!!
+   align-self-start => sistem en üste hizalama yapar
+   align-self-center => dikeyde ortaya hizalar
+   align-self-end => dikeyde en alta hizalar
+   align-self-baseline => içeriklerin alt kısımları birbiriyle aynı hizada olacak şekilde bir hizalama yapar
+   align-self-strecth => içeriği dikeyde eşit uzunluklara boşluk bırakmadan yayar
+
+        align-self-ekran boyutu-özellik ile de ekran boyutlarına göre özellik ayarlayabilirsin!!!
+-->
+            <div class="p-2 align-self-start bg-success">flexicerik1</div> 
+            <div class="p-2 align-self-end bg-danger">flexicerik2</div>
+            <div class="p-2 align-self-center bg-secondary">flexicerik3</div>
+            <div class="p-2 align-self-strecth bg-success">flexicerik4</div> 
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

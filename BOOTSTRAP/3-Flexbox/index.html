@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 3-Flexbox</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4">d-flex neymiş?</div>
+        <div class="d-inline-flex bg-danger p-3 text-white mb-4">d-flex-inline neymiş? d-flex-inline neymiş? d-flex-inline neymiş?</div>
+    </div>
+<!--
+    d-flex bir satırın tamamını kendini ayırır ve başka nesne kabul etmez sahip olduğu satıra
+    d-flex-inline ise satırda nesne,yazı vb büyüklüğüne bağlı olarak ihtiyacı olan alanı kaplar
+    d-flex ve d-inline-flex özelliklerini ekran boyutlarına göre optimize edebiliriz.
+-->
+
+    <div class="container-fluid my-2 p-3">
+        <div class="d-inline-flex d-lg-flex bg-danger p-3 text-white mb-4">d-flex-inline neymiş? d-flex-inline neymiş? d-flex-inline neymiş?</div>
+        <div class="d-flex d-lg-inline-flex bg-dark p-3 text-white mb-4">d-flex neymiş?</div>
+    </div> <!--ekran boyutuna göre optimize edilerek oluşturulmuş bir flexbox yapıları.. d-ekran boyutu-flex veya d-ekran boyutu-inline-flex ile oluyor-->
+
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex bg-dark p-3 text-white mb-4">
+            <div class="p-2">d-flex neymiş-1?</div>
+            <div class="p-2"><img src="1654469469583043-3.jpg" alt="yok" class="img-fluid"></div>
+            <div class="p-2">d-flex neymiş-2?</div>
+        </div>
+    </div>
+
+    <!--Hizalama soldan sağa doğru kendiliğinden yapılır ancak biz bunu sağdan sola yapmak istersek flex-row-reverse özelliğini d-flex class özelliğine ekleriz-->
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex flex-row-reverse bg-dark p-3 text-white mb-4">
+            <div class="p-2">reverse olan d-flex</div>
+            <div class="p-2">reverse olan d-flex</div>
+            <div class="p-2">reverse olan d-flex</div>
+        </div>
+    </div>
+
+    <!--Öte yandan yine hizalama türünü de ekran boyutlarına göre değiştirebiliriz. Bunun için flex-ekran boyutu-row-reverse yapman yeterli-->
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex flex-md-row-reverse bg-dark p-3 text-white mb-4">
+            <div class="p-2">medium sonrası reverse olan d-flex</div>
+            <div class="p-2">medium sonrası reverse olan d-flex</div>
+            <div class="p-2">medium sonrası reverse olan d-flex</div>
+        </div>
+    </div>
+
+    <!--reverse başlatıp sonrasında normal hizalamada yapabiliriz-->
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex flex-row-reverse flex-lg-row bg-dark p-3 text-white mb-4">
+            <div class="p-2">lg sonrası flex</div>
+            <div class="p-2">lg sonrası flex</div>
+            <div class="p-2">lg sonrası flex</div>
+        </div>
+    </div>
+
+    <!--Hizalamayı yukarıdan aşağıya da yapabilir ve yine bunun reverse halini de kullanabiliriz. Ayrıca ikisinin komibnasyonunu da kullanabiliriz-->
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex flex-column-reverse flex-lg-column bg-dark p-3 text-white mb-4">
+            <div class="p-2">lg sonrası flex-1</div>
+            <div class="p-2">lg sonrası flex-2</div>
+            <div class="p-2">lg sonrası flex-3</div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid my-2 p-3">
+        <div class="d-flex flex-column-reverse flex-md-column flex-lg-row-reverse flex-xl-row bg-danger p-3 text-white mb-4">
+            <div class="p-2">column-row flex-1</div>
+            <div class="p-2">column-row flex-2</div>
+            <div class="p-2">column-row flex-3</div>
+        </div>
+    </div>
+
+    <!--FLEX İÇİN GEÇERLİ OLAN YUKARIDAKİ TÜM HERŞEY INLİNE-FLEX İÇİNDE GEÇERLİ!!!-->
+    
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

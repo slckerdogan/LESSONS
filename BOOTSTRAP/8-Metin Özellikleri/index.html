@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 8-Metin Özellikleri </title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+    <!--lead classı daha düzgün bir paragraf konsepti sunar. İnce punto ve büyük size'lı harflerle-->
+    <p class="lead">Ne şıksın sen öyle</p>
+
+    <!--Metinleri yatay hizalama-->
+    <p class="text-start">Beni sola hizala</p> <!--metni sahip olduğu alan dahilinde sola hizalar-->
+    <p class="text-center">Beni ortaya hizala</p> <!--metni sahip olduğu alan dahilinde ortaya hizalar-->
+    <p class="text-end">Beni sona hizala</p> <!--metni sahip olduğu alan dahilinde sona hizalar-->
+    <!--text-ekran boyutu-hizalama şekli ile ekran boyutuna has hizalama stilleri de yapabiliriz-->
+    <p class="text-md-end text-lg-start text-xl-center">Beni ekran boyutuna göre hizala</p>
+
+    <!--text-nowrap: İçeriği ekran boyutuna göre uyarlamayı kaldırır ve taşmalar gözlenir. text-wrap ise tersini yapar. 
+        text-ekran boyutu-(no)wrap ile de ekran boyutuna has işlemler yapabiliriz-->
+    <p class="text-nowrap">Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?</p>
+
+    <!--text-break: Görüntüyü bozmamak adına bitişik şeyleri taşmadan kurtarmak adına alt satıra atar ve ekran küçüldüğünde bozulmaları görmemiş oluruz
+    text-ekran boyutu-break ile de ekran boyutuna göre düzenleme yapabiliriz-->
+    <p class="text-break">Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?
+        Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?
+        Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?Noldu bana böyle?
+    </p>
+
+    <!--text-decoration classları
+    underline altını çizer;line-through üstünü çizer ve none metni sade halde bırakır.
+    text-decoration-ekran boyutu-özellik ile de ekran boyutuna göre de düzenleme yapabiliriz-->
+    <a href="#" class="text-decoration-underline">Deneme</a>
+    <a href="#" class="text-decoration-line-through">Deneme</a>
+    <a href="#" class="text-decoration-none">Deneme</a>
+    
+    <!--Metni büyük/küçük harfe dönüştürme
+    lowercase tüm harfleri küçültür;uppercase tüm harfleri büyütür;capitalize kelimelerin ilk harflerini büyütür.
+    text-ekran boyutu-özellik ile de ekran boyutuna göre de düzenleme yapabiliriz-->
+    <br>
+    <a href="#" class="text-lowercase">DENEME</a>
+    <a href="#" class="text-uppercase">deneme</a>
+    <a href="#" class="text-capitalize">deneme</a>
+
+    <!--font-size classları:fs-sayı ile ifade edilir ve sayı değeri 1-6 arasındadır. Bunlar ekran özelliğine göre uyarlanamıyor-->
+    <p class="fs-1">Ne şıksın sen öyle font-size</p>
+    <p class="fs-2">Ne şıksın sen öyle font-size</p>
+    <p class="fs-3">Ne şıksın sen öyle font-size</p>
+    <p class="fs-4">Ne şıksın sen öyle font-size</p>
+    <p class="fs-5">Ne şıksın sen öyle font-size</p>
+    <p class="fs-6">Ne şıksın sen öyle font-size</p>
+
+    <!--font-weight classları. Bunlar ekran özelliğine göre uyarlanamıyor--><hr>
+    <p class="fw-bold">Ne şıksın sen öyle font-weight</p>
+    <p class="fw-bolder">Ne şıksın sen öyle font-weight</p>
+    <p class="fw-normal">Ne şıksın sen öyle font-weight</p>
+    <p class="fw-light">Ne şıksın sen öyle font-weight</p>
+    <p class="fw-lighter">Ne şıksın sen öyle font-weight</p>
+    <p class="fst-italic">Ne şıksın sen öyle font-weight</p>
+    <p class="fst-normal">Ne şıksın sen öyle font-weight</p>
+
+    <!--line-height classları. Bunlar ekran özelliğine göre uyarlanamıyor-->
+    <p class="lh-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum delectus velit itaque voluptates aliquam facere tempore suscipit maxime. Iusto nostrum officia magni. Explicabo incidunt et tempore.</p>
+    <p class="lh-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis temporibus mollitia accusantium eos fugit, unde neque repellat aperiam quia ab pariatur, veniam exercitationem, alias quas ipsam dignissimos nihil id iure similique aspernatur. Quasi, hic nemo consectetur dolorum vel eveniet officia! Repudiandae, animi aut. Quos, possimus.</p>
+    <p class="lh-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, nesciunt aspernatur? A blanditiis corrupti perferendis saepe reprehenderit odit autem ratione necessitatibus, labore iusto aliquam iure harum.</p>
+    <p class="lh-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam fuga assumenda, dolorem facere, mollitia, iusto pariatur dolores beatae temporibus maxime ducimus! Quos omnis fugiat nobis minus.</p>
+
+    <!--font monospace ile boşlukları az daha arttırıp birazcık daha kalınımsı bir yazı yaratabiliriz. Bunlar ekran özelliğine göre uyarlanamıyor-->
+    <p class="font-monospace">Mono-space nedir acaba bakıp görelim...</p>
+
+    <!--linklerde text reset classı kullanılmış bir rengi, renk değişime uğrasa dahi bunun değişmesini önleyerek kullanmayı sağlıyor. Bunlar ekran özelliğine göre uyarlanamıyor-->
+    <p class="text-muted">Bu renk <a href="#" class="text-reset">Text-reset</a> de uygulanacak</p>
+
+    <!--list-unstyled classı listeye tanımlı madde işaretini kaldırıyor. Bunlar ekran özelliğine göre uyarlanamıyor-->
+    <ul class="list-unstyled">
+        <li>A</li>
+        <li>B</li>
+        <li>C
+            <ul>
+                <li>C1</li>
+                <li>C2</li>
+                <li>C3</li>
+            </ul>
+        </li>
+        <li>D</li>
+    </ul>
+
+    <!--list-inline classı içerikleri yan yana getirir. Bunlar ekran özelliğine göre uyarlanamıyor-->
+    <ul class="list-inline">
+        <li class="list-inline-item">A</li>
+        <li class="list-inline-item">B</li>
+        <li class="list-inline-item">C</li>
+        <li class="list-inline-item">D</li>
+    </ul>
+
+
+    </div>
+    
+
+    
+    
+    
+    
+    
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
