@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage ve Button Kullanarak Renk Değiştirme</title>
+    <style>
+        #btn{
+            display: block;
+            position: absolute;
+            top:100px;
+            bottom:100px;
+            left:100px;
+            right:100px;
+            width: calc(100% - 200px);
+            height: calc(100% - 200px);
+            font-size:3em;
+            font-weight: 600;
+            border:0;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Rastgele Renk Değiştirme</button>
+    
+    <script>
+    
+        const btn= document.querySelector("#btn");
+        btn.onclick=function(){
+            let kirmizi=Math.floor(Math.random()*255);
+            let yesil=Math.floor(Math.random()*255);
+            let mavi=Math.floor(Math.random()*255);
+            
+            let renk=`rgb(${kirmizi},${yesil},${mavi})`;
+            btn.style.background=renk;
+            //seçilen rengi tarayıcıya kaydedelim.
+ 
+            localStorage.setItem('renk',renk);//renk olarak kaydettik
+        }
+        
+        //renk adında kayıtlı değer varsa tarayıcıda onu çağıralım
+        if(localStorage.getItem('renk'))
+        {
+            btn.style.background=localStorage.getItem('renk');//sayfa yüklendiğinde rengi butona aktarıyoruz.
+            
+        }
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select ve checkbox İşlemleri</title>
+</head>
+
+<body id="Color">
+    <div>
+        <form id="frmValidate" name="frmValidate">
+            <div>
+                <label for="city">City</label>
+                <select id="city">
+                    <option value="JS">JS</option>
+                    <option value="ANGULAR">ANGULAR</option>
+                    <option value="REACT">REACT</option>
+                    <option value="VUE">VUE</option>
+                    <option value="NODEJS">NODEJS</option>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" id="accept">
+                <label for="accept">I read and I agree</label>
+            </div>
+            <button type="button" id="Btn">Click</button>
+        </form>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        let Btn = document.querySelector("#Btn");
+        let Index = document.querySelector("#city");
+        let control = document.querySelector("#accept");
+        Btn.addEventListener("click", function () {
+            let valueSelected = Index.options[Index.selectedIndex].value;
+            if (!control.checked) {
+                alert("Please read the privacy policy");
+                window.location.reload(false); //sayfayı yeniden yükleme kısmı
+            }
+            else {
+                alert(valueSelected + " seçtiniz. Lütfen ilerlemek için tamama basınız!");
+
+                color=document.querySelector("#Color");
+                color.style.backgroundColor="tomato";
+
+
+                go("#result", "https://www.youtube.com/", 10); //yönlendirme için süreli sayaç uygulaması
+                function go(nickname, Adress, seconds) {
+                    if (seconds === 0) {
+                        window.location.href = Adress;
+                    }
+                    document.querySelector(nickname).textContent = seconds + " saniye sonra sayfadasınız";
+                    seconds--;
+                    setTimeout(function () {
+                        go(nickname, Adress, seconds);
+                    }, 1000);
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

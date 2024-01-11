@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Nesnesi</title>
+</head>
+
+<body>
+    <button type="button" onclick="openWindow()">WindowOpen</button>
+    <button type="button" onclick="resizeWindow()">WindowResize</button>
+    <button type="button" onclick="moveWindow()">WindowMove</button>
+    <button type="button" onclick="closeWindow()">WindowClose</button>
+    <button type="button" onclick="showScreen()">Screen Özellikleri</button>
+    <button type="button" onclick="showLocation()">Location Özellikleri</button>
+    <button type="button" onclick="Load()">Yükle</button>
+    <hr>
+    <p id="result"></p>
+    <p id="resulttwo"></p>
+    <script>
+        let newWindow, details;
+        function openWindow() {
+            newWindow = window.open("https://www.google.com.tr", "newWindow", "width=600,height=400");
+            //newWindow.document.write("MERHABA");
+        }
+        function resizeWindow() {
+            newWindow.resizeTo(1000, 800);
+        }
+        function moveWindow() {
+            newWindow.moveTo(800, 200);
+        }
+        function closeWindow() {
+            newWindow.close();
+        }
+
+        //open da site yazılıysa resize ve move çalışmıyor. boş ise sorun yok
+
+        function showScreen() {
+            details = document.getElementById("result");
+            details.innerHTML = "Merhaba<br>" +
+                "screenWidth özelliği: " + screen.width + "<br>" +
+                "screenHeight özelliği: " + screen.height + "<br>" +
+                "screenavailWidth özelliği: " + screen.availWidth + "<br>" +
+                "screenavailHeight özelliği: " + screen.availHeight + "<br>" +
+                "screencolorDepth özelliği: " + screen.colorDepth + "<br>" +
+                "screenpixelDepth özelliği: " + screen.pixelDepth; + "<br>"
+        }
+        
+        function showLocation() {
+            details = document.getElementById("resulttwo");
+            details.innerHTML = "Merhaba<br>" +
+                "window.location.href özelliği: " + window.location.href; + "<br>" +
+                "window.location.hostname özelliği: " + window.location.hostname; + "<br>" +
+                "window.location.pathname özelliği: " + window.location.pathname; + "<br>" +
+                "window.location.protocol özelliği: " + window.location.protocol; + "<br>" +
+                "window.location.port özelliği: " + window.location.port; + "<br>"
+
+                //tüm location özelliklerl görülüyor ama bir arada değil. BU açıdan çalışması sorunlu oldu!!!
+        }
+
+        function Load(){
+            window.location.assign("https://www.github.com");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

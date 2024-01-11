@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-Catch</title>
+</head>
+<body>
+    <input type="text" id="data">
+    <button type="button" onclick="errors()">Click</button>
+    <p id="result"></p>
+
+    <script>
+        function errors(){
+            var message,inputValue;
+            inputValue=document.getElementById('data').value;
+            message=document.getElementById('result');
+            message.innerHTML="";
+            
+            try{
+                if(inputValue=="") throw "Bu alanı boş bırakamazsınız";
+                if(isNaN(inputValue)) throw "Bu alana sadece sayı girmelisiniz";
+                inputValue=Number(inputValue);
+                if(inputValue<5){
+                    throw "Girilen sayı 5'ten küçük olamaz";
+                }
+                else if(inputValue>15){
+                    throw "Girilen sayı 15'ten büyük olamaz";
+                }
+            }catch(e){
+                message.innerHTML=e;
+            }finally{
+                document.getElementById('data').value="";
+            }
+        }
+    </script>
+</body>
+</html>

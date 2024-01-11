@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Boxes</title>
+</head>
+<body>
+    <button type="button" onclick="boxes()">Click</button>
+    <p id="result"></p>
+
+    <script>
+        let result;
+        result=document.getElementById("result");
+        function boxes(){
+            /*popup boxes yaratma yol 1 alert komutu aktif etme
+            alert("Merhaba\nJS");*/
+
+            //popup boxes yaratma yol 2 prompt ile değer alma
+            let message,getValue;
+            getValue=prompt("Lütfen değeri giriniz..."); //prompt JS'ye dışarıdan veri girmeyi sağlar...
+            if(getValue==null || getValue==""){
+                message="Lütfen değeri girin!!!";
+            }
+            else if(getValue=="JS"){
+                message="Girdiğiniz ders olan " +getValue +" sistemde mevcut";
+            }
+            else{
+                message="Üzgünüz";
+            }
+
+            /*popup boxes yaratma yol 3 confirm ile işlem yaptırma
+             if(confirm("Silecek misin?")==true){
+                message="Silindi!!";
+             }
+             else{
+                message="Son anda silmedin!!";
+             }*/
+        result.innerHTML=message;
+        }
+    </script>
+</body>
+</html>

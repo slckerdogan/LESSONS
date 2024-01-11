@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakalama ve Kabarcıklanma</title>
+</head>
+<style>
+
+    #Div1 {
+        top:50px;
+        width: 300px;
+        height: 400px;
+        background-color: black;
+    }
+
+    #p1 {
+        top:50px;
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        background-color: aqua;
+
+    }
+
+    #Div2 {
+        top:50px;
+        width: 300px;
+        height: 400px;
+        background-color: black;
+    }
+
+    #p2 {
+        top:50px;
+        margin-left: 150px;
+        position: relative;
+        background-color: blueviolet;
+        width: 100px;
+        height: 200px;
+    }
+</style>
+<body>
+    <div class="change" id="Div1">
+        <p id="p1">Ben kabarcıklanma olayıyım</p>
+    </div>
+
+    <div class="change" id="Div2">
+        <p id="p2">Ben yakalama olayıyım</p>
+    </div>
+
+    <script>
+        var p1,p2,Div1,Div2;
+        p1=document.querySelector("#p1");
+        p2=document.querySelector("#p2");
+        Div1=document.querySelector("#Div1");
+        Div2=document.querySelector("#Div2");
+
+        p1.addEventListener("click",function(){
+            alert("P1 Paragrafına tıkladın");
+        },false);
+
+        Div1.addEventListener("click",function(){
+            alert("Div1 Paragrafına tıkladın");
+        },false);
+
+        p2.addEventListener("click",function(){
+            alert("P2 Paragrafına tıkladın");
+        },true);
+
+        Div2.addEventListener("click",function(){
+            alert("Div2 Paragrafına tıkladın");
+        },true);
+
+    </script>   
+</body>
+</html>

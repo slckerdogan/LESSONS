@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage - Yerel Depolama</title>
+</head>
+<body id="body">
+    <input type="color" id="degistir">
+    <button id="renkDegistir" onclick="renkDegistir();">Bana Tikla</button>
+
+
+    <script>
+        document.getElementById("body").style.background=localStorage.getItem("yeniArkaPlanRenk");
+        document.getElementById("degistir").value=localStorage.getItem("yeniArkaPlanRenk");
+        function renkDegistir(){
+            var olusanRenk=document.getElementById("degistir").value;
+
+            var arkaPlan=document.getElementById("body");
+            
+            localStorage.setItem("yeniArkaPlanRenk",olusanRenk);
+
+            arkaPlan.style.background=localStorage.getItem("yeniArkaPlanRenk");
+
+        }
+
+    </script>
+</body>
+</html>

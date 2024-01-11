@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfayı Süreli Yönlendirme Uygulaması</title>
+</head>
+<body>
+    <div>
+        <p id="result"></p>
+    </div>
+    <script>
+        go("#result","https://www.google.com.tr",10);
+        function go(nickname,Adress,seconds){
+            if(seconds===0){
+                window.location.href=Adress;
+            }
+            document.querySelector(nickname).textContent=seconds + " saniye sonra sayfadasınız";
+            seconds--;
+            setTimeout(function(){
+                go(nickname,Adress,seconds);
+            },1000);
+        }
+    </script>
+</body>
+</html>
